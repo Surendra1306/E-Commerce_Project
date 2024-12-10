@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: Product-Service-App
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+  datasource:
+    password: Sure@2001
+    url: jdbc:mysql://localhost:3306/EcomProject
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+ port: 8082
+ 
+product-service:
+ messages:
+  catErr: category not found
+  catSucc: category created successfully
+  catgDelete: category deleted successfully
+  catgFetch: category with id fetched successfullly
+  catgUpdate: category updated successfully
+  prodDelete: product deleted successfully
+  prodErr: product not found
+  prodFetch: product with id fetched successfully
+  prodSucc: product created successsfully
+  prodUpdate: product updated successfully
+  allCatgFetch: all the categories fetched succssfully
+  allProdFetch: all the products fetched succssfully
+  stockUpdate: stock updated successfully

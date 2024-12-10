@@ -1,0 +1,21 @@
+server:
+  port: 2222
+  
+spring:
+  application:
+    name: 03-Config-Server
+    
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          uri: https://github.com/Surendra1306/Application_Properties
+
+# Application messages goes here
+#auth-service:
+ #messages: 
+  #userReg: User Created
+  #userRegErr: User Creation Failed
+  #login: Login Success
+  #loginErr: Invalid Credentials  
